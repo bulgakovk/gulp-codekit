@@ -1,21 +1,21 @@
 {
-  "name": "gulp-codekit",
-  "version": "0.1.2",
+  "name": "gulp-codekit-extended",
+  "version": "0.1.4",
   "description": "Makes inclusion of files a breeze. Supports CodeKit and Prepros includes. Forked from http://github.com/wiledal/gulp-include by Hugo Wiledal",
-  "homepage": "http://github.com/designbyadrian/gulp-codekit",
+  "homepage": "https://github.com/bulgakovk/gulp-codekit",
   "repository": {
     "type": "git",
-    "url": "git://github.com/designbyadrian/gulp-codekit.git"
+    "url": "git://https://github.com/bulgakovk/gulp-codekit.git"
   },
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
   "keywords": [
-    "gulpplugin"
+    "gulpplugin", "gulp", "gulpcodekit"
   ],
   "author": {
-    "name": "Adrian von Gegerfelt"
+    "name": "Kirill Bulgakov"
   },
   "license": "MIT",
   "devDependencies": {
