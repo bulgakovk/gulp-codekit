@@ -1,6 +1,6 @@
 {
   "name": "gulp-codekit-extended",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Makes inclusion of files a breeze. Supports CodeKit and Prepros includes. Forked from http://github.com/wiledal/gulp-include by Hugo Wiledal",
   "homepage": "https://github.com/bulgakovk/gulp-codekit",
   "repository": {
