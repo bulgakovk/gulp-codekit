@@ -103,7 +103,9 @@ function processInclude(content, filePath, sourceMap) {
       .replace(/['"]/g, "")
       .trim();
     var split = includeCommand.split(" ");
-    
+    if (split[1].indexOf("@codekit-") !== -1) {
+        split = split.slice(1);
+    }
     // Split the directive and the path
     var includeType = split[0];
     var includePath = relativeBasePath + "/" + split[1];
