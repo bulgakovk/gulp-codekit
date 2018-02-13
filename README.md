@@ -11,7 +11,7 @@ Heavily based on [gulp-include](http://github.com/wiledal/gulp-include) by [Hugo
 
 ## Installation
 ```shell
-npm install gulp-include
+npm i gulp-codekit-extended
 ```
 ## Usage
 Example `gulpfile.js`:
