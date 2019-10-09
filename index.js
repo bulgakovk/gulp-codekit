@@ -55,7 +55,7 @@ module.exports = function (params) {
 };
 
 function processInclude(content, filePath, sourceMap) {
-  var matches = content.match(/^(\s+)?(\/{2,}|\/\*|\#|\<\!\-\-)(\s+)?(\=|\s\@codekit\-)(\s+)?(include|require|append|prepend)(.+$)/mg);
+  var matches = content.match(/^(\s+)?(\/{2,}|\/\*|\#|\<\!\-\-)(\s+)?(\=|\s\@codekit\-)(\s+)?(include|require|append|prepend)( quiet )?(.+$)/mg);
   var relativeBasePath = path.dirname(filePath);
 
   if (!matches) return {content: content, map: null};
@@ -101,6 +101,8 @@ function processInclude(content, filePath, sourceMap) {
       .replace(/(\/\/|\/\*|\#)(\s+)?=(\s+)?/g, "")
       .replace(/(\*\/)$/gi, "")
       .replace(/['"]/g, "")
+      .replace(/[;]/g,"")
+      .replace(" quiet", "")
       .trim();
     var split = includeCommand.split(" ");
     if (split[1].indexOf("@codekit-") !== -1) {
@@ -128,7 +130,7 @@ function processInclude(content, filePath, sourceMap) {
     var replaceContent = '';
     for (var y = 0; y < fileMatches.length; y++) {
       var globbedFilePath = fileMatches[y];
-      
+
       // If directive is of type "require" and file already included, skip to next.
       if (includeType == "require" && includedFiles.indexOf(globbedFilePath) > -1) continue;
       
